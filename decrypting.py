@@ -11,18 +11,15 @@ import base64
 All_files = []
 
 for root, dirs, files in os.walk("."):
-<<<<<<< HEAD
+
     for file in files:
         path = os.path.join(root,file)
-<<<<<<< HEAD
-=======
         dirs[:] = [d for d in dirs if d != ".git"]
->>>>>>> 85c47c2 (Initial commit - prevent double encryption)
         
         if path == "./encrypting.py" or path == "./key.key" or path == "./decrypting.py":
             continue
         All_files.append(path)
-=======
+
     dirs[:] = [d for d in dirs if not d.startswith(".")]
 
     visible_file = [f for f in files if not f.startswith(".")]
@@ -33,7 +30,6 @@ for root, dirs, files in os.walk("."):
             if path == "./encrypting.py" or path == "./key.key" or path == "./decrypting.py":
                 continue
             All_files.append(path)
->>>>>>> 2191175 (secret encode)
 
 
 
@@ -45,19 +41,9 @@ secretphase = "bWFybW90Cg=="
 
 user_phase = input("Enter secret phase to decrypt the files!\n")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-if(secretkey == user_phase):
-=======
-if secretphase == user_phase:
-
-
->>>>>>> 85c47c2 (Initial commit - prevent double encryption)
-=======
-print(base64.b64decode(secretphase).decode("utf-8").strip())
 
 if base64.b64decode(secretphase).decode("utf-8").strip() == user_phase:
->>>>>>> 2191175 (secret encode)
+
 
     for file in All_files:
         with open(file, "rb") as thefile:
@@ -73,17 +59,10 @@ if base64.b64decode(secretphase).decode("utf-8").strip() == user_phase:
 
 
 
-<<<<<<< HEAD
-    root = tk.Tk()
-    root.withdraw()
-
-    messagebox.showinfo("Your data is decrypted!", "Good Job")
-=======
     # root = tk.Tk()
     # root.withdraw()
 
     # messagebox.showinfo("Your data is decrypted!", "Good Job")
->>>>>>> 85c47c2 (Initial commit - prevent double encryption)
 
 else: 
     # root = tk.Tk()
