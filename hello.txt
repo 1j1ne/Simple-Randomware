@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Hello
+=======
+gAAAAABq8TEGfiBpaNWP_gJlN8N9Tfwrqh5VTAaCeIQoFu0hdYmrfW8--FJdHtD6D-gqWNGDbl_k_8ESzyFKYjyDZjxQhGzXNQ==
+>>>>>>> 85c47c2 (Initial commit - prevent double encryption)

